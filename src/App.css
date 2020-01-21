@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+.container {
+  background-color: rgba(250, 235, 215, 0.24);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  background-color: rgba(240, 139, 6, 0.192);
+  padding: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+.add-comment,
+.comment-list {
+  padding: 30px;
+  margin: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-comment span {
+  display: block;
+  margin: 20px 20px 20px 0;
+}
+
+.add-comment input {
+  display: block;
+  width: 300px;
+  border-radius: 5px;
+  outline-color: darkorange;
+  height: 30px;
+}
+
+button {
+  margin: 40px 20px 20px 0;
+  background-color: rgba(231, 140, 21, 0.493);
+  padding: 5px 15px;
+  border-radius: 5px;
+  outline: none;
+  font-weight: bolder;
+}
+
+button:active {
+  background-color: rgba(255, 148, 9, 0.795);
+}
+
+.comment-item {
+  position: relative;
+  width: 400px;
+}
+.delete-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0;
+}
+
+.comment-content {
+  padding: 20px;
+  border: solid rgb(201, 197, 193) 1px;
+  border-radius: 5px;
+}
+
+.comment-typing {
+  display: block;
+  width: 300px;
+  border-radius: 10px;
+  border: solid rgb(201, 197, 193) 1px;
+  outline-color: darkorange;
 }
