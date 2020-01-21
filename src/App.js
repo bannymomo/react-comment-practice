@@ -9,8 +9,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       comments: [
-        { person: "徐勇", commentContent: "React学不好怎么办？不活了！" },
-        { person: "杨丽明", commentContent: "React挺好的！就是头发都快掉没了" }
+        { person: "Mick", commentContent: "React is funny !" },
+        { person: "Chen", commentContent: "React is boring... " }
       ],
       userInputValue: "",
       contentInputValue: ""
@@ -30,6 +30,15 @@ class App extends React.Component {
       person: this.state.userInputValue,
       commentContent: this.state.contentInputValue
     };
+    if (!newPost.person) {
+      alert("Please fill in your name");
+      return;
+    }
+
+    if (!newPost.commentContent) {
+      alert("Please write some comments");
+      return;
+    }
     const newComments = [...this.state.comments];
     newComments.push(newPost);
     this.setState({
